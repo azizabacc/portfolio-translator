@@ -23,6 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 /src/css/test.css
-/public
+
 package-lock.json
 README.md
+public
