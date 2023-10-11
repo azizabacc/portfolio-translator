@@ -1,0 +1,32 @@
+
+
+.service-icon {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    border: 1px solid white;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  .service-icon:hover {
+    transform: scale(1.4); 
+    background-color:#8776765e;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    cursor:pointer;
+
+    
+  }
+  .services-icons {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;  }
+  
+    @media (max-width: 340px) {
+        .services-icons {
+            justify-content: center;
+             }
+      }

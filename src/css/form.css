@@ -1,0 +1,86 @@
+.form-section {
+
+  
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image :  url('./background3.jpg');    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 10%;
+  }
+  .top-form{       display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+textarea{
+  box-shadow: 0 8px 4px rgb(0 0 0 / 24%)
+
+}
+  .form-section select {
+    background-color: #fff;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; /* Coins arrondis de la liste déroulante */
+    margin-bottom: 15px;
+  }
+  input{
+    box-shadow: 0 8px 4px rgb(0 0 0 / 24%)
+  }
+  .form-section h2 {
+    color: #333;
+    padding: 10%;
+    font-size: xx-large;
+    text-align: center;
+  }
+  
+  .form-section label {
+    color: #333; /* Couleur du texte de l'étiquette en gris foncé */
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-section input[type="text"],
+  .form-section input[type="email"],
+  .form-section input[type="text"],
+  .form-section textarea {
+    background-color: #fff; /* Fond blanc pour les champs de texte */
+    color: #333; /* Texte gris foncé */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis des champs de texte */
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form{
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 60%;
+
+  }
+  .form-section button {
+    background-color: #333; /* Fond gris foncé pour le bouton */
+    color: #fff; /* Texte blanc */
+    border: none;
+    border-radius: 5px; /* Coins arrondis du bouton */
+    padding: 10px 20px;
+    cursor: pointer; /* Curseur en pointeur au survol */
+  }
+  
+  .form-section button:hover {
+    background-color: #555; /* Nouvelle couleur au survol, un ton plus foncé */
+  }
+  @media (max-width: 768px) {
+    .top-form {
+      flex-direction: column;
+  
+  }
+  }
+  .message-input{
+    
+  }

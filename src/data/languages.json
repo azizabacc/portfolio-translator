@@ -1,0 +1,37 @@
+{
+    "fr": {
+      "name": "Nom :",
+      "email": "E-mail :",
+      "subject": "Sujet :",
+      "message": "Message :",
+      "submitButton": "Envoyer",
+      "home": "ACCEUIL",
+      "services": "SERVICES",
+      "contact": "CONTACT",
+      "rate" : "TARIFS"
+    },
+    "en": {
+      "name": "Name:",
+      "email": "Email:",
+      "subject": "Subject:",
+      "message": "Message:",
+      "submitButton": "Submit",
+      "home": "HOME",
+      "services": "SERVICES",
+      "contact": "CONTACT",
+      "rate" : "PRICES"
+    },
+    "es": {
+      "name": "Nombre:",
+      "email": "Correo electrónico:",
+      "subject": "Asunto:",
+      "message": "Mensaje:",
+      "submitButton": "Enviar",
+      "home": "Inicio",
+    "about": "ACERCA DE",
+    "services": "SERVICIOS",
+    "contact": "CONTACTO",
+    "rate" :"PRECIOS"
+    }
+  }
+  

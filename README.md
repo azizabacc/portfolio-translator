@@ -1,70 +1,176 @@
-# Getting Started with Create React App
+- [x] ACCUEIL : Traductrice jurée / assermentée 
+Combinaison de langues 
+VTI 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [ ] SERVICES :  
+TRADUCTIONS VALABLES TTE BELGIQUE 
+E-LEGALISATION 
+TYPES DE DOC 
+* Acte de naissance
+* Certificats de mariage 
+* Certificats de décès
+* Certificat de non-empêchement et Nulla Ostas 
+* Casier judiciaire 
+* Contrats
+* Permis de conduire
+* Déclarations IMTI
+* Peines de divorce
+* Rapports et documents médicaux 
+* Informations financières
+* Factures
+* Document académique
 
-## Available Scripts
+- [ ] COMMENT PROCÉDER : 
+1. Prise de contact : CLIENT délivre le document qu’il souhaite voir traduire sous forme de piиce jointe
+devis prйliminaire envoyй par e-mail
 
-In the project directory, you can run:
+2. Facture : Dans le cas où le client accepte l’offre de prix, (le traducteur) fournit une facture, comprenant ses coordonnйes et celles du client, qu’il lui fera parvenir dans les plus brefs dйlais
 
-### `npm start`
+3. Traduction 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. Remise : Une fois toutes ces йtapes franchies, le traducteur sera enfin en mesure de remettre la traduction au client, par e-mail + EXPLIQUER IMPRESSION VALIDITÉ
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+- [ ] TARIF :  PRIX AU MOT - Tarif minimum
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ ] CONTACT
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [ ] DEVIS GRATUIT :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  <ul>
+                    <li className='doc-category'> Documents d'État Civil
+                        <ul>
+                            <li className='doc-title'>Acte de naissance</li>
+                            <li className='doc-title'>Certificats de mariage</li>
+                            <li className='doc-title'>Certificats de décès</li>
+                            <li className='doc-title'>Certificat de non-empêchement et Nulla Ostas</li>
+                        </ul>
+                    </li>
+                    <li className='doc-category'> Documents Légaux
+                        <ul>
+                            <li className='doc-title'>Casier judiciaire</li>
+                            <li className='doc-title'>Contrats</li>
+                            <li className='doc-title'>Permis de conduire</li>
+                            <li className='doc-title'>Déclarations IMTI</li>
+                            <li className='doc-title'>Peines de divorce</li>
+                        </ul>
+                    </li>
+                    <li className='doc-category'> Documents Médicaux
+                        <ul>
+                            <li className='doc-title'>Rapports et documents médicaux</li>
+                        </ul>
+                    </li>
+                    <li className='doc-category'>Documents Financiers
+                        <ul>
+                            <li className='doc-title'>Informations financières</li>
+                            <li className='doc-title'>Factures</li>
+                        </ul>
+                    </li>
+                    <li className='doc-category'>Documents Éducatifs
+                        <ul>
+                            <li className='doc-title'>Document académique</li>
+                        </ul>
+                    </li>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+                </ul>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+                .select-container {
+    position: relative;
+    display: inline-block;
+    background-color: #333; 
+    color: #fff; 
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 5px 10px; 
+  }
+  
+  .select-container select {
+    background-color: transparent; /* Retire le fond par défaut du select */
+    color: inherit; /* Hérite de la couleur du texte parent */
+    border: none; /* Retire la bordure par défaut */
+    outline: none; /* Supprime la mise en évidence du focus */
+    cursor: pointer; /* Curseur en pointeur au survol */
+  }
+  
+  /* Styles pour la flèche déroulante personnalisée */
+  .select-container select::after {
+    content: '\25BC'; /* Flèche déroulante vers le bas */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+  }
+  
+  /* Hover Styles */
+  .select-container:hover {
+    background-color: #444; /* Couleur de fond légèrement plus foncée au survol */
+  }
+  
+  /* Focus Styles */
+  .select-container:focus-within {
+    border-color: #ff9900; /* Couleur de bordure orange au focus */
+    box-shadow: 0 0 5px rgba(255, 153, 0, 0.5); /* Ombre légère au focus */
+  }
+/* custom-select.css */
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
 
-### Code Splitting
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+.select-selected {
+  background-color: DodgerBlue;
+}
 
-### Analyzing the Bundle Size
+/*style the arrow inside the select element:*/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
 
-### Advanced Configuration
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
 
-### Deployment
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

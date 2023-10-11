@@ -1,0 +1,83 @@
+.services-container {
+  display: flex;
+  width: 99.9%;
+    justify-content: center;
+  background-image: url("./background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 10%;
+  padding-top: 10%;
+}
+.services-section {
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  margin: 2vh 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.hidden-list {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease; /* Ajoutez une transition en douceur */
+}
+.visible-list {
+  transition: max-height 2s ease; /* Ajoutez une transition en douceur */
+
+  max-height: 1000px; /* Réglez cette valeur en fonction de la hauteur maximale de votre liste */
+}
+.services-section ul {
+  list-style: disc inside;
+}
+
+.doc-category {
+  margin: 1vh;
+  list-style-type: none;
+  font-weight: bold;
+  text-align: center;
+  width: 90%;
+  background-color: #fff;
+  padding: 3%;
+  /* height: inherit; */
+  color: #0a0909;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;}
+  .doc-category:hover{
+    cursor :pointer;
+  }
+.doc-title {
+  text-align: left;
+
+  font-weight: normal;
+}
+.services-section a {
+  color: #007bff; /* Lien bleu */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Transition de couleur au survol */
+}
+
+.services-section a:hover {
+  color: #0056b3; /* Nouvelle couleur au survol */
+}
+
+.services-desc {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.section-subtitle {
+  margin-bottom: 2%;
+  margin-top: 7%;
+}
+.section-subsubtitle{
+  margin-bottom: 5%;
+}
