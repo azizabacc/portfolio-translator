@@ -10,6 +10,7 @@ import $ from 'jquery';
 import Footer from './components/Footer';
 import ScrollButton from './components/ScrollButton';
 import Procedure from './components/Procedure';
+import SiteTile from './components/SiteTitle';
 function App() {
   const [language, setLanguage] = useState(languages.en);
   const canvasRef = useRef(null); // Définissez canvasRef avec useRef
@@ -41,6 +42,7 @@ function App() {
   return (
     <div className="App">
       <Navbar language={language} onLanguageChange={handleLanguageChange} />
+      <SiteTile/>
       <Element className='tag' name='home'><About /></Element>
       <Element className='tag'  name='services'><Services /></Element>
       <ScrollButton /> 

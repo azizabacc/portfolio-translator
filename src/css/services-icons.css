@@ -19,11 +19,12 @@
     
   }
   .services-icons {
-    width: 100vw;
+    width: 80vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;  }
+    flex-wrap: wrap;
+    margin: 0px 10vw;  }
   
     @media (max-width: 340px) {
         .services-icons {
