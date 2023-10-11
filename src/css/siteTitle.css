@@ -1,0 +1,19 @@
+.site-title {
+    padding-top: 80px;
+    font-size: revert;
+    font-weight: 800;
+    font-size: 3rem;
+  text-align:center;
+  }
+  .site-subtitle{
+    font-size: 2rem;
+    text-align:center;
+  
+  }
+  .site-subsubtitle {
+    font-size: 1rem;
+    text-align:center;
+  
+  }
+  
+  

@@ -48,10 +48,17 @@
   color: #0a0909;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #ccc;}
+  border: 1px solid #ccc;
+  transition: transform 0.5s ease-in-out;
+}
   .doc-category:hover{
+    background-color:#87767624;
+
     cursor :pointer;
+    transform: scale(1.1);
+    cursor: pointer;
   }
+
 .doc-title {
   text-align: left;
 

@@ -20,11 +20,6 @@ function About() {
         <div className="about-section">
 
 
-            <h1 className='section-title'>KB TRADUCTIONS</h1>
-            <h2 className='section-subtitle'>Traductrice Jurée / Assermentée</h2>
-
-            <h3 className='section-subsubtitle'>Combinaison De Langues VTI</h3>
-            
             <div className='about-desc'>
             <ServicesIcons/>
 

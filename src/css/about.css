@@ -25,19 +25,11 @@
   animation: slideInFromRight 0.5s ease forwards;
 }
 
-
-
-
-
-
 .about-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-
- 
 }
-
 
 .about-desc {
   background-image: url("./background1.jpg");
@@ -55,7 +47,7 @@
 
 }
 
-.about-desc-container{
+.about-desc-container {
   background-color: #ffffffc4;
   padding: -35px;
   display: flex;
@@ -64,27 +56,9 @@
   width: 98%;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-
-}
-.section-title {
-  padding-top: 80px;
-  font-size: revert;
-  font-weight: 800;
-  font-size: 3rem;
-
-}
-.section-subtitle{
-  font-size: 2rem;
-  
-}
-.section-subsubtitle {
-  font-size: 1rem;
-
 }
 
-
-
-.contact-btn{
+.contact-btn {
   background-color: #333;
   color: #fff;
   border: none;
@@ -93,14 +67,11 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border: 1px solid white;
-
 }
 .contact-btn:hover {
-  transform: scale(1.4); 
-  background-color:#8776765e;
+  transform: scale(1.4);
+  background-color: #8776765e;
   border: 2px solid white;
   transition: all 0.3s ease;
-  cursor:pointer;
-
-  
+  cursor: pointer;
 }
