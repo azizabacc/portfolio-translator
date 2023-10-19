@@ -2,11 +2,12 @@
   display: flex;
   width: 99.9%;
     justify-content: center;
-  background-image: url("./background2.jpg");
+  background-image: url("../images/background2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 10%;
   padding-top: 10%;
+  background-position: center center;
 }
 .services-section {
   background-color: #fff;

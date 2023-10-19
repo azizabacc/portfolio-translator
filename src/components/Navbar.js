@@ -17,6 +17,8 @@ function Navbar ({ language, onLanguageChange }) {
 }
   return (
     <header>
+      <div className="navbar-logo" >   
+      </div>
       <div className="menu-toggle" onClick={toggleMenu}>
       <FontAwesomeIcon className='burger-menu' icon={faBars} onClick={toggleMobileMenu}/>    
       </div>

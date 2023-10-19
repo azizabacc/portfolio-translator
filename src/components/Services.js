@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBalanceScale, faCoins, faPersonMilitaryToPerson, faHospital,faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faBalanceScale, faCoins, faPersonMilitaryToPerson, faHospital, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import '../css/services.css';
 
 function Services() {
@@ -11,8 +11,8 @@ function Services() {
 
     // Fonction pour basculer la visibilité de la liste au clic sur le titre
     const toggleList = (index) => {
-        const newShowLists = Array(5).fill(false); // Réinitialiser toutes les listes à false
-        newShowLists[index] = !showLists[index]; // Basculer la visibilité de la liste actuelle
+        const newShowLists = Array(5).fill(false);
+        newShowLists[index] = !showLists[index]; 
         setShowLists(newShowLists);
     };
 
@@ -23,13 +23,13 @@ function Services() {
                 <h3 className='section-subsubtitle'>
                     TRADUCTIONS VALABLES TTE BELGIQUE E-LEGALISATION
                 </h3>
-                <div className='services-desc'>
-                    {/* Exemple d'un service */}
-                    <div className='doc-category'>
-                    <FontAwesomeIcon icon={faPersonMilitaryToPerson} />
+                <div className='services-desc' >
+                 
+                    <div className='doc-category' name='doc-civil' onClick={() => toggleList(0)} >
+                        <FontAwesomeIcon icon={faPersonMilitaryToPerson} />
                         <h3
                             className='service-title'
-                            onClick={() => toggleList(0)} // Appel de la fonction pour basculer la visibilité
+
                         >
                             Documents d'État Civil
                         </h3>
@@ -42,12 +42,11 @@ function Services() {
                             </li>
                         </ul>
                     </div>
-                    <div className='doc-category'>
-                    <FontAwesomeIcon icon={faBalanceScale} />
+                    <div className='doc-category'   name='doc-legal' onClick={() => toggleList(1)}>
+                        <FontAwesomeIcon icon={faBalanceScale} />
 
                         <h3
                             className='service-title'
-                            onClick={() => toggleList(1)} // Appel de la fonction pour basculer la visibilité
                         >
                             Documents Légaux
                         </h3>
@@ -59,12 +58,12 @@ function Services() {
                             <li className='doc-title'>Peines de divorce</li>
                         </ul>
                     </div>
-                    {/* Exemple d'un autre service */}
-                    <div className='doc-category'>
-                    <FontAwesomeIcon icon={faHospital} />
+                   
+                    <div className='doc-category'  name='doc-medical'  onClick={() => toggleList(2)} >
+                        <FontAwesomeIcon icon={faHospital} />
                         <h3
                             className='service-title'
-                            onClick={() => toggleList(2)} // Appel de la fonction pour basculer la visibilité
+
                         >
                             Documents Médicaux
                         </h3>
@@ -72,17 +71,17 @@ function Services() {
                             <li className='doc-title'>Rapports et documents médicaux</li>
                         </ul>
                     </div>
-                    <div className='doc-category'>
+                    <div className='doc-category'  name='doc-financial'onClick={() => toggleList(3)}>
                         <FontAwesomeIcon icon={faCoins} />
-                        <h3 className='service-title' onClick={() => toggleList(3)}>Documents Financiers </h3>
+                        <h3 className='service-title'>Documents Financiers </h3>
                         <ul className={showLists[3] ? 'visible-list' : 'hidden-list'}>
                             <li className='doc-title'>Informations financières</li>
                             <li className='doc-title'>Factures</li>
                         </ul>
                     </div>
-                    <div className='doc-category'>
-                    <FontAwesomeIcon icon={faGraduationCap} />
-                        <h3 className='service-title' onClick={() => toggleList(4)}>Documents Éducatifs </h3>
+                    <div className='doc-category'  name='doc-educative' onClick={() => toggleList(4)}>
+                        <FontAwesomeIcon icon={faGraduationCap} />
+                        <h3 className='service-title'>Documents Éducatifs </h3>
                         <ul className={showLists[4] ? 'visible-list' : 'hidden-list'}>
                             <li className='doc-title'>Document académique</li>
                         </ul>

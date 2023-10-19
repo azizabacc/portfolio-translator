@@ -19,12 +19,14 @@
     
   }
   .services-icons {
-    width: 80vw;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 0px 10vw;  }
+    height: 120px;
+    background-color: #D9D9D9;
+  }
   
     @media (max-width: 340px) {
         .services-icons {

@@ -4,13 +4,14 @@ import About from './components/About';
 import Services from './components/Services';
 import ContactForm from './components/ContactForm';
 import languages from './data/languages.json'
-import React, { useState , useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Element } from 'react-scroll';
 import $ from 'jquery';
 import Footer from './components/Footer';
 import ScrollButton from './components/ScrollButton';
 import Procedure from './components/Procedure';
 import SiteTile from './components/SiteTitle';
+import ServicesIcons from './components/ServivesIcons';
 function App() {
   const [language, setLanguage] = useState(languages.en);
   const canvasRef = useRef(null); // Définissez canvasRef avec useRef
@@ -35,22 +36,23 @@ function App() {
         }
       }
     });
-  }, []); 
-  
+  }, []);
+
 
 
   return (
-    <div className="App">
+    <div className="app">
       <Navbar language={language} onLanguageChange={handleLanguageChange} />
-      <SiteTile/>
-      <Element className='tag' name='home'><About /></Element>
-      <Element className='tag'  name='services'><Services /></Element>
-      <ScrollButton /> 
-      <Element className='tag'  name='procedure'>  <Procedure/></Element>
+      <SiteTile />
+      <ServicesIcons />
+      <Element  name='home'><About /></Element>
+      <Element className='tag' name='services'><Services /></Element>
+      <ScrollButton />
+      <Element className='tag' name='procedure'>  <Procedure /></Element>
 
-    
-      <Element  className='tag' name='contact'><ContactForm  language={language} id="contact"/></Element>
-      <Footer/>
+
+      <Element className='tag' name='contact'><ContactForm language={language} id="contact" /></Element>
+      <Footer />
     </div>
   );
 }

@@ -11,9 +11,7 @@ function About() {
       // Utilisez setTimeout pour définir un délai avant d'afficher l'élément
       const timer = setTimeout(() => {
         setShowAboutDesc(true);
-      }, 1000); // Définissez la durée souhaitée en millisecondes (1 seconde dans cet exemple)
-  
-      // Assurez-vous de nettoyer le délai lorsque le composant est démonté
+      }, 1000);
       return () => clearTimeout(timer);
     }, []);
     return (
@@ -21,16 +19,20 @@ function About() {
 
 
             <div className='about-desc'>
-            <ServicesIcons/>
+  
 
             <div className={`about-desc-container ${showAboutDesc ? 'slide-in' : ''}`}>
+            
+
+            <div className='spf-infos'></div>
+            <div>
             <h2 className='section-subtitle'>TARIF :  PRIX AU MOT - Tarif minimum</h2>
             <h2 className='section-subtitle'>DEVIS GRATUIT </h2>
-
-
-
-            </div>
             <button className='contact-btn'><Link to="contact" spy={true} smooth={true} duration={500}>Contact</Link></button>
+            </div>
+            </div>
+          
+ 
 
             </div>
         </div>
