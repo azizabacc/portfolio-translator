@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhoneVolume, faAt } from '@fortawesome/free-solid-svg-icons'; // Importez l'icône du téléphone
 import '../css/form.css'
-const MAX_COUNT = 2;
+const MAX_COUNT = 10;
 function ContactForm({ language }) {
     const [uploadedFiles, setUploadedFiles] = useState([]);
     const [fileLimit, setFileLimit] = useState(false);
@@ -44,7 +46,7 @@ function ContactForm({ language }) {
 
 
     const handleFileUpload = (e) => {
-        const files = e.target.files; // Obtenez la liste des fichiers sélectionnés
+        const files = e.target.files;
         const uploadedFiles = [];
 
         for (let i = 0; i < files.length; i++) {
@@ -52,23 +54,38 @@ function ContactForm({ language }) {
             uploadedFiles.push(file);
         }
 
-        // Stockez les fichiers dans l'état ou effectuez toute autre opération nécessaire
         setFormData({
             ...formData,
-            fileUpload: uploadedFiles, // Stockez les fichiers dans un tableau
+            fileUpload: uploadedFiles,
         });
     };
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Vous pouvez ajouter ici la logique pour envoyer le formulaire (par exemple, via une API).
-        // formData contient maintenant les valeurs soumises.
-        console.log(formData);
-    };
 
+        // Préparez les données à envoyer
+        const name = {
+            name: "John Doe", // Remplacez par le nom réel de l'utilisateur
+        };
+        console.log(name);
+
+        const response = await fetch('http://localhost:3001/send-mail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(name),
+        })
+            .then((response) => response.json())
+            .then(async (response) => {
+                console.log('ok');
+                console.log(response)
+            });
+    }
     return (
-        <div className='form-section'>
+        <div className='form-section section'>
 
-            <h2 className=''>Besoin d’un devis ? Joignez votre document et recevez une estimation du prix sous 24h gratuitement et sans engagement.</h2>
+            <h2 className='section-title'>Besoin d’un devis ?<br /> Joignez votre document et recevez une estimation du prix sous 24h <br />gratuitement et sans engagement.</h2>
             <form onSubmit={handleSubmit}>
                 <div className='top-form'>
                     <div >
@@ -97,6 +114,17 @@ function ContactForm({ language }) {
                 </div>
                 <div>
                     <label htmlFor="fileUpload" className={`${!fileLimit} ? '' : 'disabled'`}>{language.subject}</label>
+
+                    <label htmlFor="fileUpload" className="label-file-upload">Seleccionar imagenes</label>
+                    <input
+                        type="file"
+                        id="fileUpload"
+                        name="fileUpload"
+                        onChange={handleFileEvent}
+                        multiple
+                        style={{ display: 'none' }}
+                        disabled={fileLimit}
+                    />
                     <div className='uploaded-files-list'>
                         {uploadedFiles.map(file => (
                             <div>
@@ -104,14 +132,6 @@ function ContactForm({ language }) {
                             </div>
                         ))}
                     </div>
-                    <input
-                        type="file"
-                        id="fileUpload"
-                        name="fileUpload"
-                        onChange={handleFileEvent}
-                        multiple
-                        disabled={fileLimit} />
-
                 </div>
                 <div>
                     <label htmlFor="message">{language.message}</label>
@@ -124,13 +144,15 @@ function ContactForm({ language }) {
                         required
                     />
                 </div>
-                <button type="submit">{language.submitButton}</button>
+                <button type="submit" onClick={handleSubmit}>{language.submitButton}</button>
             </form>
             <div className='contact-infos'>
-                <p> MAIL:{" "}
+                <FontAwesomeIcon icon={faAt} style={{ color: "#ffffff", }} />
+                <p>
                     <a href="mailto:kenza.baccouri@gmail.com"><span className='email-link'>kenza.baccouri@gmail.com</span></a></p>
-                <p>    TEL:{" "}
-                    <a href="tel:+34613863599">+34 613 863 599</a></p>
+                <FontAwesomeIcon icon={faPhoneVolume} style={{ color: "#ffffff", }} />
+                <p>
+                    <a href="tel:+34613863599" className='email-link'>+34 613 863 599</a></p>
             </div>
         </div>
     );

@@ -2,7 +2,7 @@ import '../css/procedure.css';
 function Procedure() {
     return ( 
         <div className="timeline">
-            <h2 className='title-service'>COMMENT PROCÉDER ?</h2>
+            <h2 className='section-title'>COMMENT PROCÉDER ?</h2>
         <Step
           stepNumber={1}
           title="Prise de contact"
@@ -32,7 +32,7 @@ function Procedure() {
       <div className="step">
         <div className="step-number">{stepNumber}</div>
         <div className="step-content">
-          <h3>{title}</h3>
+          <h3 >{title}</h3>
           <p>{description}</p>
         </div>
       </div>

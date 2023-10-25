@@ -1,37 +1,136 @@
 {
-    "fr": {
+    "FR": {
       "name": "Nom :",
       "email": "E-mail :",
-      "subject": "Sujet :",
+      "subject": "Document.s à traduire :",
       "message": "Message :",
       "submitButton": "Envoyer",
       "home": "ACCEUIL",
       "services": "SERVICES",
       "contact": "CONTACT",
-      "rate" : "TARIFS"
+      "rate" : "TARIFS",
+      "servicesSection" : {
+        "titles" : {
+          "title" : "SERVICES",
+          "subtitle" : "TRADUCTIONS VALABLES TTE BELGIQUE E-LEGALISATION"
+        },
+        "docs" : {
+          "civil":{
+            "1" :  "Acte de naissance",
+            "2" :  "Certificats de mariage",
+            "3" :  "Certificats de décès",
+            "4" : "Certificat de non-empêchement et Nulla Ostas"
+          },
+          "legal" : {
+            "1" :  "Casier judiciaire",
+            "2" :  "Contrats",
+            "3" :  "Permis de conduire",
+            "4" : "Déclarations IMTI",
+            "5" : "Peines de divorce"
+          },
+          "medical" : {
+            "1" :  "Rapports et documents médicaux"
+   
+          },
+          "financial" : {
+            "1" :  "Informations financières",
+            "2" :  "Factures"
+          },
+          "educative" : {
+            "1" :  "Document académique"
+
+          }
+          
+      
+        }
+      }
     },
-    "en": {
+    "EN": {
       "name": "Name:",
       "email": "Email:",
-      "subject": "Subject:",
+      "subject": "Document(s) to be translated :",
       "message": "Message:",
       "submitButton": "Submit",
       "home": "HOME",
       "services": "SERVICES",
       "contact": "CONTACT",
-      "rate" : "PRICES"
-    },
-    "es": {
-      "name": "Nombre:",
-      "email": "Correo electrónico:",
-      "subject": "Asunto:",
-      "message": "Mensaje:",
-      "submitButton": "Enviar",
-      "home": "Inicio",
-    "about": "ACERCA DE",
-    "services": "SERVICIOS",
-    "contact": "CONTACTO",
-    "rate" :"PRECIOS"
+      "rate" : "PRICES",
+      "servicesSection" : {
+        "titles" : {
+          "title" : "SERVICES",
+          "subtitle" : "VALID TRANSLATIONS ALL OVER BELGIUM E-LEGALIZATION"
+        },
+        "docs" : {
+          "civil":{
+            "1" :  "Birth certificate",
+            "2" :  "Marriage certificates",
+            "3" :  "Death certificates",
+            "4" : "Certificate of no impediment and Nulla Ostas"
+          },
+          "legal" : {
+            "1" :  "Criminal record",
+            "2" :  "Contracts",
+            "3" :  "Driving license",
+            "4" : "IMTI declarations",
+            "5" : "Divorce penalties"
+          },
+          "medical" : {
+            "1" :  "Medical reports and documents"
+          },
+          "financial" : {
+            "1" :  "Financial information",
+            "2" :  "Invoices"
+          },
+          "educative" : {
+            "1" :  "Academic document"
+          }
+        }
+      }
     }
+    
+,    
+"ES": {
+  "name": "Nombre:",
+  "email": "Correo electrónico:",
+  "subject": "Documento(s) a traducir :",
+  "message": "Mensaje:",
+  "submitButton": "Enviar",
+  "home": "Inicio",
+  "services": "SERVICIOS",
+  "contact": "CONTACTO",
+  "rate" :"PRECIOS",
+  "servicesSection" : {
+    "titles" : {
+      "title" : "SERVICIOS",
+      "subtitle" : "TRADUCCIONES VÁLIDAS EN TODO BÉLGICA E-LEGALIZACIÓN"
+    },
+    "docs" : {
+      "civil":{
+        "1" :  "Acta de nacimiento",
+        "2" :  "Certificados de matrimonio",
+        "3" :  "Certificados de defunción",
+        "4" : "Certificado de no impedimento y Nulla Ostas"
+      },
+      "legal" : {
+        "1" :  "Antecedentes penales",
+        "2" :  "Contratos",
+        "3" :  "Licencia de conducir",
+        "4" : "Declaraciones de IMTI",
+        "5" : "Penalizaciones de divorcio"
+      },
+      "medical" : {
+        "1" :  "Informes y documentos médicos"
+      },
+      "financial" : {
+        "1" :  "Información financiera",
+        "2" :  "Facturas"
+      },
+      "educative" : {
+        "1" :  "Documento académico"
+      }
+    }
+  }
+}
+
   }
   

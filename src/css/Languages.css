@@ -4,55 +4,24 @@
 .select-container {
   position: relative;
   display: inline-block;
+  width:80px
 
 }
 
-/* Style du bouton principal */
-.select-button {
-  background-color: DodgerBlue;
-  color: white;
-  border: none;
-  border-radius: 10px ;
-  padding: 8px 16px;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-}
-.select-button {
-  background-color: DodgerBlue;
-  color: white;
-  border: none;
-  border-radius: 10px ;
-  padding: 8px 16px;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-}
 
-.select-button.border {
- border-radius : 10px 10px 0 0 ;
-}
-/* Style des options */
-.select-options {
-  position: absolute;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 0 0 10px 10px;
-  width: 100%;
-  max-height: 150px;
-  overflow-y: auto;
-  display: none;
-  /* Ajout de transition pour une ouverture/fermeture en douceur des options */
-  transition: all 0.3s ease-in-out;
-}
-
-/* Style des options au survol */
-.select-options button:hover {
-  background-color: #f2f2f2;
-}
-
-/* Afficher les options lorsque le bouton est cliqué */
-.select-container.open .select-options {
-display: flex;
-flex-direction: column;
-}
+  .language-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .scroll-language{
+    position: absolute;
+    border: 1px solid white;
+    width: 100%;
+    padding: 15%;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+  }
+ .flag-icon{
+  width:50%;
+ }
