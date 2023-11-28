@@ -4,19 +4,40 @@ import About from './components/About';
 import Services from './components/Services';
 import ContactForm from './components/ContactForm';
 import languages from './data/languages.json'
-import React, { useState , useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Element } from 'react-scroll';
 import $ from 'jquery';
 import Footer from './components/Footer';
 import ScrollButton from './components/ScrollButton';
 import Procedure from './components/Procedure';
 import SiteTile from './components/SiteTitle';
-function App() {
-  const [language, setLanguage] = useState(languages.en);
-  const canvasRef = useRef(null); // Définissez canvasRef avec useRef
+import ServicesIcons from './components/ServivesIcons';
+import SpfDocs from './components/SpfDoc';
+import PageLoader from './components/PageLoader';
+import Services1 from './components/Services1';
+import Tarif from './components/Tarifs';
 
-  const handleLanguageChange = (e) => {
-    const selectedLanguage = e.target.value;
+function App() {
+  const [language, setLanguage] = useState(languages.FR);
+  const [loading, setLoading] = useState(true);
+  const [showLists, setShowLists] = useState(Array(5).fill(false));
+  const toggleList = (index) => {
+    const newShowLists = Array(5).fill(false);
+    newShowLists[index] = !showLists[index]; 
+    setShowLists(newShowLists);
+};
+  useEffect(() => {
+    // Simulez un délai de chargement
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    // N'oubliez pas de nettoyer le timer lorsque le composant est démonté
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleLanguageChange = (selectedLanguage) => {
+
     setLanguage(languages[selectedLanguage]);
   };
 
@@ -35,22 +56,44 @@ function App() {
         }
       }
     });
-  }, []); 
-  
+  }, []);
+
 
 
   return (
-    <div className="App">
-      <Navbar language={language} onLanguageChange={handleLanguageChange} />
-      <SiteTile/>
-      <Element className='tag' name='home'><About /></Element>
-      <Element className='tag'  name='services'><Services /></Element>
-      <ScrollButton /> 
-      <Element className='tag'  name='procedure'>  <Procedure/></Element>
-
-    
-      <Element  className='tag' name='contact'><ContactForm  language={language} id="contact"/></Element>
-      <Footer/>
+    <div className="app">
+      {loading ? (
+        <PageLoader />
+      ) : (
+        <>
+          <Navbar language={language} onLanguageChange={handleLanguageChange} />
+          <SiteTile />
+          <ServicesIcons toggleList={toggleList} />
+          <Element name="home">
+            <About />
+          </Element>
+          <Element className="tag" name="services">
+            <Services language={language} showLists={showLists} toggleList={toggleList}/>
+          </Element>
+{/*           <Element className="tag" name="services">
+            <Services1  />
+          </Element> */}
+          <ScrollButton />
+          <Element className="tag" name="rate">
+            <Tarif />
+          </Element>
+          <Element className="tag" name="procedure">
+            <Procedure />
+          </Element>
+          <Element className="tag" name="contact">
+            <ContactForm language={language} id="contact" />
+          </Element>
+          <Element className="tag" name="SpfDocs">
+            <SpfDocs />
+          </Element>
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

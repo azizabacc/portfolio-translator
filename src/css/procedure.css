@@ -1,7 +1,7 @@
 /* Style de base pour la timeline */
 .timeline {
-    margin-top: 100px;
-    margin-bottom: 100px;  }
+    margin-top: 5%;
+    margin-bottom: 5%;  }
   
   /* Style des étapes de la timeline */
   .step {
@@ -13,7 +13,7 @@
 
   }
   .title-service {
-    margin-bottom: 10%;
+    margin-bottom: 50px;
   
     font-size: 2rem;
     text-align: center;
@@ -39,9 +39,8 @@
   }
   
   .step h3 {
-    font-size: 16px;
-    margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 5%;
+    font-weight: 600;
   }
   
   .step p {

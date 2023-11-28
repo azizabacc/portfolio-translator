@@ -1,25 +1,8 @@
-.services-container {
-  display: flex;
-  width: 99.9%;
-    justify-content: center;
-  background-image: url("./background2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 10%;
-  padding-top: 10%;
-}
 .services-section {
-  background-color: #fff;
-  color: #333;
-  padding: 20px;
-  margin: 2vh 0;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
+  background-image: url("../images/background2.jpg");
+
 }
+
 
 .hidden-list {
   display: block;
@@ -80,11 +63,4 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-.section-subtitle {
-  margin-bottom: 2%;
-  margin-top: 7%;
-}
-.section-subsubtitle{
-  margin-bottom: 5%;
 }

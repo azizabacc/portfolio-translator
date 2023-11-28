@@ -1,96 +1,85 @@
-
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBalanceScale, faCoins, faPersonMilitaryToPerson, faHospital,faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faBalanceScale, faCoins, faPersonMilitaryToPerson, faHospital, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import '../css/services.css';
+import List from './List';
 
-function Services() {
-    // État local pour gérer la visibilité de chaque liste
-    const [showLists, setShowLists] = useState(Array(5).fill(false));
+function Services({ showLists, toggleList, language }) {
+    const [listItems, setListItems] = useState([]);
 
-    // Fonction pour basculer la visibilité de la liste au clic sur le titre
-    const toggleList = (index) => {
-        const newShowLists = Array(5).fill(false); // Réinitialiser toutes les listes à false
-        newShowLists[index] = !showLists[index]; // Basculer la visibilité de la liste actuelle
-        setShowLists(newShowLists);
-    };
+    useEffect(() => {
+        // Créez un tableau contenant toutes les listes de documents
+        const allLists = [
+            language.servicesSection.docs.civil,
+            language.servicesSection.docs.legal,
+            language.servicesSection.docs.medical,
+            language.servicesSection.docs.financial,
+            language.servicesSection.docs.educative,
+        ];
+
+        // Remplissez listItems avec toutes les listes de documents
+        const filledListItems = allLists.map((list) => {
+            const array = [];
+            for (let index in list) {
+                array.push(list[index]);
+            }
+            return array;
+        });
+
+        setListItems(filledListItems);
+    }, [language.servicesSection.docs]);
 
     return (
-        <div className='services-container'>
-            <div className='services-section'>
-                <h2 className='section-subtitle'>SERVICES</h2>
-                <h3 className='section-subsubtitle'>
-                    TRADUCTIONS VALABLES TTE BELGIQUE E-LEGALISATION
-                </h3>
-                <div className='services-desc'>
-                    {/* Exemple d'un service */}
-                    <div className='doc-category'>
-                    <FontAwesomeIcon icon={faPersonMilitaryToPerson} />
-                        <h3
-                            className='service-title'
-                            onClick={() => toggleList(0)} // Appel de la fonction pour basculer la visibilité
-                        >
-                            Documents d'État Civil
-                        </h3>
-                        <ul className={showLists[0] ? 'visible-list' : 'hidden-list'}>
-                            <li className='doc-title'>Acte de naissance</li>
-                            <li className='doc-title'>Certificats de mariage</li>
-                            <li className='doc-title'>Certificats de décès</li>
-                            <li className='doc-title'>
-                                Certificat de non-empêchement et Nulla Ostas
-                            </li>
-                        </ul>
-                    </div>
-                    <div className='doc-category'>
-                    <FontAwesomeIcon icon={faBalanceScale} />
-
-                        <h3
-                            className='service-title'
-                            onClick={() => toggleList(1)} // Appel de la fonction pour basculer la visibilité
-                        >
-                            Documents Légaux
-                        </h3>
-                        <ul className={showLists[1] ? 'visible-list' : 'hidden-list'}>
-                            <li className='doc-title'>Casier judiciaire</li>
-                            <li className='doc-title'>Contrats</li>
-                            <li className='doc-title'>Permis de conduire</li>
-                            <li className='doc-title'>Déclarations IMTI</li>
-                            <li className='doc-title'>Peines de divorce</li>
-                        </ul>
-                    </div>
-                    {/* Exemple d'un autre service */}
-                    <div className='doc-category'>
-                    <FontAwesomeIcon icon={faHospital} />
-                        <h3
-                            className='service-title'
-                            onClick={() => toggleList(2)} // Appel de la fonction pour basculer la visibilité
-                        >
-                            Documents Médicaux
-                        </h3>
-                        <ul className={showLists[2] ? 'visible-list' : 'hidden-list'}>
-                            <li className='doc-title'>Rapports et documents médicaux</li>
-                        </ul>
-                    </div>
-                    <div className='doc-category'>
-                        <FontAwesomeIcon icon={faCoins} />
-                        <h3 className='service-title' onClick={() => toggleList(3)}>Documents Financiers </h3>
-                        <ul className={showLists[3] ? 'visible-list' : 'hidden-list'}>
-                            <li className='doc-title'>Informations financières</li>
-                            <li className='doc-title'>Factures</li>
-                        </ul>
-                    </div>
-                    <div className='doc-category'>
-                    <FontAwesomeIcon icon={faGraduationCap} />
-                        <h3 className='service-title' onClick={() => toggleList(4)}>Documents Éducatifs </h3>
-                        <ul className={showLists[4] ? 'visible-list' : 'hidden-list'}>
-                            <li className='doc-title'>Document académique</li>
-                        </ul>
-                    </div>
+        <div className='services-section section'>
+            <div className='subsection'>
+                <h2 className='section-title'>{language.servicesSection.titles.title}</h2>
+              
+                <div className='services-desc' >
+                    {listItems.map((items, index) => (
+                        <div className='doc-category' name={"doc-"+index} key={index} onClick={() => toggleList(index)}>
+                            {renderIconForIndex(index)}
+                            <h3 className='service-title'>{renderTitleForIndex(index)}</h3>
+                            <List showLists={showLists} toggleList={toggleList} items={items} number={index} />
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
     );
+
+    function renderIconForIndex(index) {
+        switch (index) {
+            case 0:
+                return <FontAwesomeIcon icon={faPersonMilitaryToPerson} />;
+            case 1:
+                return <FontAwesomeIcon icon={faBalanceScale} />;
+            case 2:
+                return <FontAwesomeIcon icon={faHospital} />;
+            case 3:
+                return <FontAwesomeIcon icon={faCoins} />;
+            case 4:
+                return <FontAwesomeIcon icon={faGraduationCap} />;
+            default:
+                return null;
+        }
+    }
+
+    function renderTitleForIndex(index) {
+        switch (index) {
+            case 0:
+                return 'Documents d\'État Civil';
+            case 1:
+                return 'Documents Légaux';
+            case 2:
+                return 'Documents Médicaux';
+            case 3:
+                return 'Documents Financiers';
+            case 4:
+                return 'Documents Éducatifs';
+            default:
+                return '';
+        }
+    }
 }
 
 export default Services;
