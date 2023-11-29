@@ -20,7 +20,7 @@ const scrollToHome = () => {
   scroll.scrollToTop(); 
 };
   return (
-    <header>
+    <div className='header'>
       <div className='top-mobile-header'>
       <div className="navbar-logo" onClick={scrollToHome}></div>
       <div className="menu-toggle" onClick={toggleMenu}>
@@ -44,7 +44,7 @@ const scrollToHome = () => {
       <LanguageSelector language={language} onLanguageChange={onLanguageChange} />
       </div>
      
-    </header>
+    </div>
   );
 }
 

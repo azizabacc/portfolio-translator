@@ -1,32 +1,36 @@
-header {
+.header {
   display: flex;
   justify-content: center;
   border-width: 1px;
-  padding: 10px;
+  
   position: sticky;
   top: 0;
   z-index: 10;
   background-color:#d9d9d9;
   align-items: center;
   font-weight :bold;
+  width : 100%;
+  padding : 1% 5%;
+  
 }
+
+.top-mobile-header{width: fit-content;}
 .menu {
   display: flex;
-
   width: 100%;
   justify-content: space-around;
   align-items: center;}
 .navbar {
   display: flex;
-  justify-content: space-between;
-  width: 70%;
+  justify-content: flex-end;
+  width: 80%;
 }
 .navbar-logo{
   background-image :  url('../images/logo.png');
   background-size: cover;
   background-repeat: no-repeat;
-  width: 4rem;
-  height: 4rem;
+  width: 80px;
+  height: 80px;
   background-position: center center;
 }
 .navbar-logo:hover{

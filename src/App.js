@@ -13,20 +13,19 @@ import Procedure from './components/Procedure';
 import SiteTile from './components/SiteTitle';
 import ServicesIcons from './components/ServivesIcons';
 import SpfDocs from './components/SpfDoc';
-import PageLoader from './components/PageLoader';
 import Services1 from './components/Services1';
 import Tarif from './components/Tarifs';
 
 function App() {
   const [language, setLanguage] = useState(languages.FR);
-  const [loading, setLoading] = useState(true);
-  const [showLists, setShowLists] = useState(Array(5).fill(false));
+/*   const [loading, setLoading] = useState(true);
+ */  const [showLists, setShowLists] = useState(Array(5).fill(false));
   const toggleList = (index) => {
     const newShowLists = Array(5).fill(false);
     newShowLists[index] = !showLists[index]; 
     setShowLists(newShowLists);
 };
-  useEffect(() => {
+/*   useEffect(() => {
     // Simulez un délai de chargement
     const timer = setTimeout(() => {
       setLoading(false);
@@ -35,7 +34,7 @@ function App() {
     // N'oubliez pas de nettoyer le timer lorsque le composant est démonté
     return () => clearTimeout(timer);
   }, []);
-
+ */
   const handleLanguageChange = (selectedLanguage) => {
 
     setLanguage(languages[selectedLanguage]);
@@ -62,38 +61,31 @@ function App() {
 
   return (
     <div className="app">
-      {loading ? (
-        <PageLoader />
-      ) : (
-        <>
+     
           <Navbar language={language} onLanguageChange={handleLanguageChange} />
           <SiteTile />
-          <ServicesIcons toggleList={toggleList} />
           <Element name="home">
             <About />
           </Element>
-          <Element className="tag" name="services">
+          <Element name="services">
             <Services language={language} showLists={showLists} toggleList={toggleList}/>
           </Element>
-{/*           <Element className="tag" name="services">
-            <Services1  />
-          </Element> */}
           <ScrollButton />
-          <Element className="tag" name="rate">
+          <Element  name="rate">
             <Tarif />
           </Element>
-          <Element className="tag" name="procedure">
+          <Element  name="procedure">
             <Procedure />
           </Element>
-          <Element className="tag" name="contact">
+          <Element  name="contact">
             <ContactForm language={language} id="contact" />
           </Element>
-          <Element className="tag" name="SpfDocs">
+          <Element name="SpfDocs">
             <SpfDocs />
           </Element>
           <Footer />
-        </>
-      )}
+     
+   
     </div>
   );
 }

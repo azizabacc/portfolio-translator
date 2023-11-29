@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneVolume, faAt } from '@fortawesome/free-solid-svg-icons'; // Importez l'icône du téléphone
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import '../css/form.css'
+
+const linkedinUrl = "https://www.linkedin.com/in/kenza-baccouri/"
+const externalLinkUrl = "https://justsearch.just.fgov.be/national-registry-search/translator/result/detail"
 const MAX_COUNT = 10;
 function ContactForm({ language }) {
+
+    const goToLink = (url) => {
+        console.log('helloo')
+        window.open(url, "_blank");
+    };
     const [uploadedFiles, setUploadedFiles] = useState([]);
     const [fileLimit, setFileLimit] = useState(false);
     const handleUploadFiles = files => {
@@ -85,75 +94,91 @@ function ContactForm({ language }) {
     return (
         <div className='form-section section'>
 
-            <h2 className='section-title'>Besoin d’un devis ?<br /> Joignez votre document et recevez une estimation du prix sous 24h <br />gratuitement et sans engagement.</h2>
-            <form onSubmit={handleSubmit}>
-                <div className='top-form'>
-                    <div >
-                        <label htmlFor="name">{language.name}</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                        />
+            <h2 className='section-subtitle'>Besoin d’un devis ?<br /> Joignez votre document et recevez une estimation du prix sous 24h <br />gratuitement et sans engagement.</h2>
+            <div className='contact-container'>
+                <form onSubmit={handleSubmit}>
+                    <div className='top-form'>
+                        <p className='div-title'>Contactez Nous</p>
+                        <div >
+                            <label htmlFor="name">{language.name}</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="email">{language.email}</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                className='email-input'
+                                required
+                            />
+                        </div>
                     </div>
                     <div>
-                        <label htmlFor="email">{language.email}</label>
+                        <label htmlFor="fileUpload" className={`${!fileLimit} ? '' : 'disabled'`}>{language.subject}</label>
+
+                        <label htmlFor="fileUpload" className="label-file-upload">Seleccionar imagenes</label>
                         <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
+                            type="file"
+                            id="fileUpload"
+                            name="fileUpload"
+                            onChange={handleFileEvent}
+                            multiple
+                            style={{ display: 'none' }}
+                            disabled={fileLimit}
+                        />
+                        <div className='uploaded-files-list'>
+                            {uploadedFiles.map(file => (
+                                <div>
+                                    {file.name}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div>
+                        <label htmlFor="message">{language.message}</label>
+                        <textarea
+                            className='message-input'
+                            id="message"
+                            name="message"
+                            value={formData.message}
                             onChange={handleChange}
-                            className='email-input'
                             required
                         />
                     </div>
-                </div>
-                <div>
-                    <label htmlFor="fileUpload" className={`${!fileLimit} ? '' : 'disabled'`}>{language.subject}</label>
+                    <button type="submit" onClick={handleSubmit}>{language.submitButton}</button>
+                </form>
+                <div className='contact-infos'>
+                    <p className='div-title'>Informations</p>
 
-                    <label htmlFor="fileUpload" className="label-file-upload">Seleccionar imagenes</label>
-                    <input
-                        type="file"
-                        id="fileUpload"
-                        name="fileUpload"
-                        onChange={handleFileEvent}
-                        multiple
-                        style={{ display: 'none' }}
-                        disabled={fileLimit}
-                    />
-                    <div className='uploaded-files-list'>
-                        {uploadedFiles.map(file => (
-                            <div>
-                                {file.name}
-                            </div>
-                        ))}
+                    <FontAwesomeIcon icon={faAt} style={{ color: "#ffffff", }} />
+                    <p>
+                        <a href="mailto:kenza.baccouri@gmail.com"><span className='email-link'>kenza.baccouri@gmail.com</span></a></p>
+                    <FontAwesomeIcon icon={faPhoneVolume} style={{ color: "#ffffff", }} />
+                    <p>
+                        <a href="tel:+34613863599" className='email-link'>+34 613 863 599</a></p>
+                    <div className="social-links">
+                        <FontAwesomeIcon className='faLinkedin' icon={faLinkedin} style={{ width: '2rem', height: '2rem' }} onClick={() => goToLink(linkedinUrl)} />
+                        <div
+                            className='spfIcon'
+                            onClick={() => goToLink(externalLinkUrl)}
+                        >
+
+                        </div>
                     </div>
+                   
                 </div>
-                <div>
-                    <label htmlFor="message">{language.message}</label>
-                    <textarea
-                        className='message-input'
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <button type="submit" onClick={handleSubmit}>{language.submitButton}</button>
-            </form>
-            <div className='contact-infos'>
-                <FontAwesomeIcon icon={faAt} style={{ color: "#ffffff", }} />
-                <p>
-                    <a href="mailto:kenza.baccouri@gmail.com"><span className='email-link'>kenza.baccouri@gmail.com</span></a></p>
-                <FontAwesomeIcon icon={faPhoneVolume} style={{ color: "#ffffff", }} />
-                <p>
-                    <a href="tel:+34613863599" className='email-link'>+34 613 863 599</a></p>
             </div>
+
         </div>
     );
 }

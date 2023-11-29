@@ -2,7 +2,7 @@ function Tarif() {
     return (
         <div className="section">
             <h2 className="section-title">TARIFS</h2>
-            <div className="subsection">
+            <div className="subsection subsection-tarif">
                 <ul>
                     <li> • Le prix est établi à partir du nombre de mots.</li>
                     <li> • 0,12€/mot HORS TVA.</li>
