@@ -1,0 +1,28 @@
+.spf-doc-section {
+    display: flex;
+
+    align-items: center;
+    background-image: url("../../assets/images/background5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    background-position: center center;
+  justify-content :center;
+  padding: 5% 0;
+
+  }
+.spf-doc-figures{
+   
+    flex-direction:column !important;
+} 
+.info-pic-1{
+  padding-bottom : 5%
+}
+
+@media screen and (min-width: 1200px) {
+
+  .spf-doc-figures{
+    align-items: center;
+   
+  }
+}
