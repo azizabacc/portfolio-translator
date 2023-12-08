@@ -22,5 +22,5 @@ export const Button = styled.div`
    cursor: pointer; 
    color: #3c2d2c73;
  
-   margin-bottom: 23px;
+   margin-bottom: -30px;
 `

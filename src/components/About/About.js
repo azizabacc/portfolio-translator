@@ -38,7 +38,7 @@ function About() {
     <div className="about-section section">
 
       <h2 className="section-title about-title">ACCUEIL</h2>
-      <h3 className="section-subtitle">BK TRAD est votre partenaire pour les traductions officielles. Nous nous engageons à garantir l'exactitude et la validité de la traduction de vos documents juridiques et administratifs.</h3>
+      <h3 className="text" style={{textAlign: "center",width: "80%",    margin: "2vh 0"}}>BK TRAD est votre partenaire pour les traductions officielles. Nous nous engageons à garantir l'exactitude et la validité de la traduction de vos documents juridiques et administratifs.</h3>
       <div className='subsection'>
 
 
@@ -57,11 +57,11 @@ function About() {
       <div className='subsection'>
 
         <ul className='div-title about-div-title'>Pourquoi choisir BK TRAD :
-          <li className='text'>Certification légale : Traductions certifiées et reconnues par les autorités officielles, garantissant leur authenticité.</li>
+          <li className='text'><span  className='text-bold'>Certification légale </span>  <br/>Traductions certifiées et reconnues par les autorités officielles, garantissant leur authenticité.</li>
 
-          <li className='text'>Précision maximale : Nous veillons à ce que chaque détail de votre document soit traduit avec précision pour éviter toute</li>
-          <li className='text'>Service clientèle: Nous sommes à votre disposition pour répondre à toutes vos questions et préoccupations.</li>
-          <li className='text'>Prix compétitifs : Nous proposons des tarifs compétitifs pour nos services.
+          <li className='text'><span className='text-bold'>Précision maximale  </span> <br/> Nous veillons à ce que chaque détail de votre document soit traduit avec précision pour éviter toute</li>
+          <li className='text'><span className='text-bold'>Service clientèle  </span> <br/>Nous sommes à votre disposition pour répondre à toutes vos questions et préoccupations.</li>
+          <li className='text'><span className='text-bold'>Prix compétitifs  </span> <br/>Nous proposons des tarifs compétitifs pour nos services.
           </li>
         </ul>
       </div>
