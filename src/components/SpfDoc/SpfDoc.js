@@ -21,7 +21,7 @@ function SpfDocs() {
                 <Modal open={isOpen} onClose={() => setIsOpen(false)} ></Modal>
 
                 <img onClick={() => { setIsOpen2(true) }} className="spf-pic" src={infos2} alt="SPF certified"></img>
-                <Modal open={isOpen2} onClose={() => setIsOpen2(false)} ></Modal>
+                <Modal2 open={isOpen2} onClose={() => setIsOpen2(false)} ></Modal2>
 
             </figure>
         </div>
