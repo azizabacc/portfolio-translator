@@ -15,7 +15,7 @@ function Footer() {
   return (
     <footer>
       <div className="social-links">
-        <FontAwesomeIcon className='faLinkedin' icon={faLinkedin} style={{ width: '2rem', height: '2rem' }} onClick={() => goToLink(linkedinUrl)} />
+        <FontAwesomeIcon className='faLinkedin' icon={faLinkedin} style={{ width: '2.8rem', height: '2.8rem' }} onClick={() => goToLink(linkedinUrl)} />
         <div
           className='spfIcon'
           onClick={() => goToLink(externalLinkUrl)}

@@ -23,7 +23,6 @@
     /* border: 1px solid white; */
     width: 100%;
     padding: 15%;
-    background-color: #D9D9D9;
     margin-top: 11%;
 
   }
@@ -32,6 +31,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width : 85px;
   }
   .language-div >*{
     transition: transform 0.5s ease-in-out;
@@ -46,3 +46,15 @@
   width:30%;
   padding :2%
  }
+ @media (max-width: 1200px) {
+select-container {
+  width : auto;
+}
+.language-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width :100%
+}
+  }
+  

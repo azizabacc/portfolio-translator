@@ -13,7 +13,9 @@
   
 }
 
-.top-mobile-header{width: fit-content;}
+.top-mobile-header{    display: flex;
+  width: 100%;
+  justify-content: space-evenly;}
 .menu {
   display: flex;
   width: 100%;
@@ -65,7 +67,12 @@
   transform: scale(1.1);
     cursor: pointer;
 }
+
 @media (max-width: 1200px) {
+.top-mobile-header{
+  justify-content: space-between;
+
+}
   .menu {
     display: none;
     transition: transform 0.5s;
@@ -104,8 +111,7 @@
     align-items: center;
   }
   .menu.show .select-container {
-    margin-right: 3vw;
-  }
+    margin-bottom: 50%;  }
   .top-mobile-header{
     display: flex;
     justify-content: space-between;

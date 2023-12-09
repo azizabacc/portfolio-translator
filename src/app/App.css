@@ -126,35 +126,34 @@
 .current-language-div > * {
   font-size: calc(var(--text-sm) + var(--factor));
 }
-.lang-iso{
+.lang-iso {
   font-size: calc(var(--text-sm) + var(--factor));
-
- }
+}
+.section-title {
+  font-size: calc(var(--section-title-sm) + var(--factor));
+}
+.section-subtitle {
+  font-size: calc(var(--section-subtitle-sm) + var(--factor));
+}
+.div-title {
+  font-size: calc(var(--div-title-sm) + var(--factor));
+}
+.text {
+  font-size: calc(var(--text-sm) + var(--factor));
+}
+.text-bold {
+  font-size: calc(var(--text-sm) + var(--factor));
+  padding: 3% 0;
+}
+.step-number {
+  font-size: calc(var(--section-subtitle-sm) + var(--factor));
+  width: 12vw;
+  height: 12vw;
+}
 @media screen and (min-width: 768px) {
   /*   *{
       color: green !important;
           } */
-  .section-title {
-    font-size: calc(var(--section-title-sm) + var(--factor));
-  }
-  .section-subtitle {
-    font-size: calc(var(--section-subtitle-sm) + var(--factor));
-  }
-  .div-title {
-    font-size: calc(var(--div-title-sm) + var(--factor));
-  }
-  .text {
-    font-size: calc(var(--text-sm) + var(--factor));
-  }
-  .text-bold {
-    font-size: calc(var(--text-sm) + var(--factor));
-    padding: 3% 0;
-  }
-  .step-number {
-    font-size: calc(var(--section-subtitle-sm) + var(--factor));
-    width: 7vw;
-    height: 7vw;
-  }
 }
 @media screen and (min-width: 1200px) {
   /*   *{

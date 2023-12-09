@@ -18,8 +18,7 @@
     text-align: center;
   }
   .step-number {
-    width: 7vw;
-    height: 7vw;
+
     background-color: #000000d4;
     color: #fff;
     display: flex;

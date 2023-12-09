@@ -1,13 +1,9 @@
-
-
 .about-section {
-
   background-image: url("../../assets/images/background7.jpg");
   background-attachment: fixed;
 
- 
-
+  padding-top: 13%;
 }
 
-.about-div-title{
+.about-div-title {
 }
