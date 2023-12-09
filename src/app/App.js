@@ -64,23 +64,23 @@ function App() {
 
       <Navbar language={language} onLanguageChange={handleLanguageChange} />
       <SiteTile />
-      <Element name="home">
+      <Element  className='tag' name="home">
         <About />
       </Element>
-      <Element name="services">
+      <Element className='tag' name="services">
         <Services language={language} showLists={showLists} toggleList={toggleList} />
       </Element>
       <ScrollButton />
-      <Element name="rate">
+      <Element className='tag' name="rate">
         <Tarif />
       </Element>
-      <Element name="procedure">
+      <Element className='tag' name="procedure">
         <Procedure />
       </Element>
-      <Element name="contact">
+      <Element className='tag' name="contact">
         <ContactForm language={language} id="contact" />
       </Element>
-      <Element name="SpfDocs">
+      <Element className='tag' name="SpfDocs">
         <SpfDocs />
       </Element>
       <Footer />

@@ -90,7 +90,6 @@ form {
 }
 @media screen and (max-width: 1200px) {
   .top-form {
-    flex-direction: row;
   }
 
   .contact-container > * {

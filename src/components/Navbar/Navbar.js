@@ -41,8 +41,8 @@ function Navbar({ language, onLanguageChange }) {
 
           <li><Link to="contact" spy={true} smooth={true} duration={500}>{language.contact}</Link></li>
         </ul>
-        <LanguageSelector language={language} onLanguageChange={onLanguageChange} />
       </div>
+      <LanguageSelector language={language} onLanguageChange={onLanguageChange} />
 
     </div>
   );
