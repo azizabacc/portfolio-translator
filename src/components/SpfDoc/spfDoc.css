@@ -17,7 +17,14 @@
 }
 .spf-pic {
   width: 55%;
+  transition: transform 0.5s ease-in-out;
 }
+
+.spf-pic:hover {
+ cursor : pointer;
+ transform : scale(1.1);
+}
+
 .faXmark {
  
   transition: transform 0.5s ease-in-out;

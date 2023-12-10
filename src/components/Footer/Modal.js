@@ -131,7 +131,7 @@ Nous vous conseillons de lire la déclaration de confidentialité du site Intern
         Close
       </button>
       </div>
-    </div >
+    </div>
     </>,
     document.getElementById('portal')
   )
