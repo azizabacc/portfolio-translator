@@ -6,8 +6,8 @@ import { CircleFlag } from 'react-circle-flags'
 function SiteTile() {
     const bracket = '}';
     return (
-        <div className="site-tile-section">
-{/*             <div className='site-lang-container'>
+        <div className="site-tile-section section">
+            {/*             <div className='site-lang-container'>
                 <div className='second-lang'>
                     <div className='site-lang-div'>
 

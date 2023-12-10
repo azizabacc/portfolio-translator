@@ -1,7 +1,7 @@
 import './procedure.css';
 function Procedure() {
     return ( 
-        <div className="section">
+        <div className="section section-procedure">
             <h2 className='section-title'>COMMENT PROCÉDER ?</h2>
         <Step
           stepNumber={1}

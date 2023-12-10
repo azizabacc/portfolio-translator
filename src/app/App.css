@@ -55,7 +55,6 @@
   align-items: center;
   width: 100vw;
   background-attachment: fixed;
-  height: 100vh;
 }
 .div-title {
   font-size: var(--div-title-sm);

@@ -1,6 +1,6 @@
 function Tarif() {
     return (
-        <div className="section">
+        <div className="section" >
             <h2 className="section-title">TARIFS</h2>
             <div className="subsection subsection-tarif">
                 <ul>
