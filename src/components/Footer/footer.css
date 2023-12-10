@@ -68,3 +68,11 @@ footer{
   .modal-content .text{
     font-weight : normal;
   }
+  .section-title.section-title-rgpd{
+    color: #333;
+    text-shadow: none;
+  }
+  .section-subtitle.section-subtitle-rgpd{
+    text-shadow: none;
+
+  }

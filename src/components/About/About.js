@@ -55,8 +55,9 @@ function About() {
         </p>
       </div>
       <div className='subsection'>
+      <h3 className='div-title about-div-title'>Pourquoi choisir BK TRADLANGUES DE TRAVAIL    </h3>
 
-        <ul className='div-title about-div-title'>Pourquoi choisir BK TRAD :
+        <ul className='div-title about-div-title about-ul'>
           <li className='text'><span  className='text-bold'>Certification légale </span>  <br/>Traductions certifiées et reconnues par les autorités officielles, garantissant leur authenticité.</li>
 
           <li className='text'><span className='text-bold'>Précision maximale  </span> <br/> Nous veillons à ce que chaque détail de votre document soit traduit avec précision pour éviter toute</li>

@@ -38,7 +38,7 @@ function Services({ showLists, toggleList, language }) {
                     {listItems.map((items, index) => (
                         <div className='doc-category div-title' name={"doc-" + index} key={index} onClick={() => toggleList(index)}>
                             {renderIconForIndex(index)}
-                            <h3 className='service-title'>{renderTitleForIndex(index)}</h3>
+                            <h3 className='section-subtitle'>{renderTitleForIndex(index)}</h3>
                             <List showLists={showLists} toggleList={toggleList} items={items} number={index} />
                         </div>
                     ))}

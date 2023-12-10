@@ -23,7 +23,8 @@
     /* border: 1px solid white; */
     width: 100%;
     padding: 15%;
-    margin-top: 11%;
+    margin-top: 3%;
+    right: 3vw;
 
   }
 
@@ -55,6 +56,9 @@ select-container {
   justify-content: space-around;
   align-items: center;
   width :100%
+}
+.scroll-language{
+  right : 0;
 }
   }
   

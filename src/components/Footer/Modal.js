@@ -32,36 +32,36 @@ export default function Modal({ open, onClose }) {
       <div style={MODAL_STYLES}  className="custom-modal-content">
         <div className='modal-content'>
         <div className="navbar-logo"></div>
-          <h1 className='section-title' >RGPD</h1>
-          <h2  className='section-subtitle'>Déclaration de confidentialité</h2>
+          <h1 className='section-title section-title-rgpd' >RGPD</h1>
+          <h2  className='section-subtitle section-subtitle-rgpd'>Déclaration de confidentialité</h2>
           <p className="text">Ci-dessous, vous trouverez des informations sur le traitement de vos données personnelles conformément au RGPD.<br />
             Nous sommes responsables du traitement de vos données personnelles.
             Données personnelles</p>
-          <h2 className='section-subtitle'>Données personnelles</h2>
+          <h2 className='section-subtitle section-subtitle-rgpd'>Données personnelles</h2>
           <p className="text">Lors de la prise en charge de vos données personnelles, BK TRAD met un point d’honneur à veiller au caractère confidentiel du traitement de vos données personnelles.<br />
             Ces dernières sont protégées contre tout risque de perte, d’accès non autorisé ou de vol. En outre, nous supprimerons vos données dès que nous n’en aurons plus besoin pour mener à bien nos activités.</p>
        
-        <h2 className='section-subtitle'>Réception de vos données personnelles</h2>
+        <h2 className='section-subtitle section-subtitle-rgpd'>Réception de vos données personnelles</h2>
         <p className="text">Lorsque vous utilisez nos services, vos données personnelles peuvent être traitées.<br/>
         Il est également possible que nous traitions les données personnelles que vous avez partagées avec nous en ligne.<br/>
         Par exemple, vous partagez des données en ligne avec nous lorsque vous demandez ou téléchargez des informations ou lorsque vous remplissez un formulaire de contact.<br/>
         Dans le cadre de cette démarche, nous mettons tout en œuvre pour être en adéquation avec vos intérêts personnels.
         </p>
-        <h2 className='section-subtitle'>Notre déclaration de confidentialité concerne BK TRAD et le site Internet </h2>
+        <h2 className='section-subtitle section-subtitle-rgpd'>Notre déclaration de confidentialité concerne BK TRAD et le site Internet </h2>
         <p className="text">Notre déclaration de confidentialité s’applique à l’utilisation de données personnelles par BK TRAD et par le site. Cette déclaration de confidentialité fait partie de notre site Internet.
         </p>
-        <h2 className='section-subtitle'>Utilisation de vos données personnelles </h2>
+        <h2 className='section-subtitle section-subtitle-rgpd'>Utilisation de vos données personnelles </h2>
         <p className="text">Nous sommes amenés à utiliser vos données personnelles lors du traitement des demandes d’informations ou lorsque nous vous fournissons des produits et/ou services.<br/>
         Nous pouvons également utiliser vos données pour nous aider à optimiser nos services. Parfois, nous conservons aussi des informations car nous y sommes tenus en vertu d’exigences financières, fiscales ou légales.
 Nous traitons uniquement les données personnelles dans la mesure où elles sont nécessaires au traitement de vos demandes ou susceptibles d’améliorer nos interactions avec vous.<br/>
 BK TRAD ne vend pas vos données personnelles à des tiers.
         </p>
-        <h2 className='section-subtitle'>Nous ne conservons pas vos données personnelles plus longtemps que nécessaire </h2>
+        <h2 className='section-subtitle section-subtitle-rgpd'>Nous ne conservons pas vos données personnelles plus longtemps que nécessaire </h2>
         <p className="text">Vos données personnelles ne seront pas conservées plus longtemps que nécessaire.<br/>
         Notre objectif est de détruire les données personnelles de nos relations commerciales dès que ces données ne sont plus nécessaires.
 Nous conservons certaines données parce que nous sommes tenus de le faire en raison d’une obligation financière et/ou fiscale. Dans ce cas, vos données seront conservées pendant au moins sept ans. Passé ce délai, nous veillerons à ce que vos données personnelles soient soigneusement effacées.<br/>
         </p>
-        <ul  className='section-subtitle'>Vous disposez de différents droits en ce qui concerne vos données personnelles :
+        <ul  className='section-subtitle section-subtitle-rgpd'>Vous disposez de différents droits en ce qui concerne vos données personnelles :
           <li>Vous avez le droit de demander l’accès à vos données personnelles, leur rectification ou leur suppression.</li>
           <li>Vous avez le droit de vous opposer au traitement de vos données personnelles.</li>
         </ul>
@@ -70,29 +70,29 @@ Nous conservons certaines données parce que nous sommes tenus de le faire en ra
         Cette situation peut se produire lorsque votre demande d’accès implique également les données personnelles d’autres personnes. Si nous rejetons votre demande, nous vous écrirons pour vous expliquer les motifs qui nous empêchent de la satisfaire.<br/>
         Il se peut que vous soyez en désaccord avec notre décision concernant une demande d’accès, de rectification ou de suppression. Dans ce cas, vous avez le droit de déposer plainte auprès de l’Autorité de protection des données.
         </p>
-        <h2 className='section-subtitle'>Notre site Internet contient des liens vers des sites Internet de tiers</h2>
+        <h2 className='section-subtitle section-subtitle-rgpd'>Notre site Internet contient des liens vers des sites Internet de tiers</h2>
         <p className="text">Notre site Internet contient divers liens vers des sites Internet de tiers.
 Nous vous conseillons de lire la déclaration de confidentialité du site Internet que vous visitez via notre site Internet. Nous ne pouvons pas être tenus responsables de la manière dont les sites Internet de tiers traitent vos données personnelles.
         </p>
-        <h2 className='section-subtitle'>Modifications de la déclaration de confidentialité</h2>
+        <h2 className='section-subtitle section-subtitle-rgpd'>Modifications de la déclaration de confidentialité</h2>
         <p className="text">Nous nous réservons le droit d’apporter des modifications à cette déclaration de confidentialité. Nous vous recommandons donc de vérifier régulièrement notre déclaration de confidentialité afin de prendre connaissance d’éventuels changements.
         </p>
-        <h2 className='section-subtitle'>Des questions ?</h2>
+        <h2 className='section-subtitle section-subtitle-rgpd'>Des questions ?</h2>
         <p className="text">Pour toute question ou tout commentaire concernant notre déclaration de confidentialité ou la manière dont BK TRAD traite vos données personnelles, veuillez contacter :  <a href="mailto:kenza.baccouri@gmail.com"><span className='email-link'>kenza.baccouri@gmail.com</span></a>
         </p>
-        <h1 className='section-title'>Conditions générales de vente : </h1>
-        <h2 className='section-subtitle'>1. Dispositions générales</h2>
+        <h1 className='section-title section-title-rgpd'>Conditions générales de vente : </h1>
+        <h2 className='section-subtitle section-subtitle-rgpd'>1. Dispositions générales</h2>
         <p className="text">Les présentes conditions générales définissent les obligations respectives des parties contractuelles dans le cadre de prestation de services de KB TRAD.
         </p>
         <p className="text">Les conditions et accords qui suivent, de même que les éventuelles modifications convenues par écrit, sont d’application aux services prestés en faveur du client et/ou du donneur d’ordre.
         </p>
         <p className="text">Les présentes conditions générales remplacent et annulent toutes les autres conditions générales ou conventions, que celle-ci soient orales ou écrites, conclues postérieurement ou antérieurement. Elles priment sur les conditions générales du client, même si celles-ci spécifient qu’elles sont seules valables. La primauté et l’exclusivité des présentes conditions générales constituent un élément essentiel du contrat.</p>
-        <h2 className='section-subtitle'>2. Commande</h2>
+        <h2 className='section-subtitle section-subtitle-rgpd'>2. Commande</h2>
         <p className="text">Tous les devis et offres de BK TRAD revêtent un caractère purement informatif en n’engagent aucunement BK TRAD tant que celle-ci n’a pas confirmé l’acceptation de l’offre par le client. Les offres et les devis de KB TRAD ne sont valables qu’un mois au maximum.
         </p>
         <p className="text">Un accord n’est parfait qu’à partir du moment où le client accepte l’offre de BK TRAD (soit en renvoyant le devis signé pour accord, soit par retour de courriel) et que BK TRAD confirme que la commande du client peut être exécutée. L’acceptation de l’offre de BK TRAD par le client entraîne l’acceptation expresse des conditions générales et particulières de BK TRAD.
         </p>
-        <h2 className='section-subtitle'>3. Prix et paiement</h2>
+        <h2 className='section-subtitle section-subtitle-rgpd'>3. Prix et paiement</h2>
         <p className="text">Les prix sont libellés en euros hors TVA et les factures sont payables au comptant dans un délai de 15 jours suivant la date de la facture.
         </p>
         <p className="text">Pour les traductions écrites, les prix de base peuvent être majorés en fonction du format des documents à traiter, de la spécificité des textes et du délai d’urgence. Des frais administratifs peuvent être imputés en cas de demande de correction d’une facture déjà établie.
@@ -103,10 +103,10 @@ Nous vous conseillons de lire la déclaration de confidentialité du site Intern
         </p>
         <p className="text">En cas de non-paiement, d’insolvabilité ou de faillite dans le chef du client, toutes les dettes impayées du client sont immédiatement exigibles, même les dettes qui découlent de factures non échues. Le cas échéant, BK TRAD se réserve le droit de suspendre pour une durée indéterminée les prestations en cours et futures, sans préjudice du droit de BK TRAD de réclamer le paiement immédiat des travaux et des livraisons suspendus.
         </p>
-        <h2 className='section-subtitle'>4. Annulations</h2>
+        <h2 className='section-subtitle section-subtitle-rgpd'>4. Annulations</h2>
         <p className="text">En cas d’annulation unilatérale de la commande de traduction par le donneur d’ordre, une indemnité est due par celui-ci dont le montant est proportionnel au travail déjà effectué, y compris les recherches terminologiques préalables. Cette base de calcul se réfère aux exemples d’établissement des prix proposés par la CBTI, qui peuvent être obtenus au siège social de cette association. En outre, BK TRAD est en droit d’exiger une indemnité de rupture de contrat égale à 20 % du montant de la facture ou de la note d’honoraires.
       </p>
-      <h2 className='section-subtitle'>5. Plaintes</h2>
+      <h2 className='section-subtitle section-subtitle-rgpd'>5. Plaintes</h2>
         <p className="text">En aucun cas, BK TRAD ne saurait être tenue responsable des réclamations motivées par des nuances de style ou des choix terminologiques distincts. BK TRAD décline toute responsabilité en cas d’incohérence ou d’ambigüité du texte source, la vérification de la cohérence technique du texte finale relevant de la seule responsabilité du client.
       </p>
       <h2 className='section-subtitle'>6. Responsabilités des parties</h2>

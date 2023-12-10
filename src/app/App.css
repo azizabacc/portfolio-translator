@@ -150,6 +150,10 @@
   width: 12vw;
   height: 12vw;
 }
+.navbar{
+  font-size: calc(var(--text-sm) + var(--factor));
+  
+}
 @media screen and (min-width: 768px) {
   /*   *{
       color: green !important;

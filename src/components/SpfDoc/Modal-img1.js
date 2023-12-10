@@ -31,9 +31,9 @@ export default function Modal({ open, onClose }) {
     return ReactDom.createPortal(
         <>        
 
-            <div style={OVERLAY_STYLES}>
+            <div  className='modal'>
                 <FontAwesomeIcon className='faXmark' icon={faXmark}  onClick={onClose}  />
-                <img style={MODAL_STYLES} className='modal-img' src={infos1} alt="SPF certified"></img>
+                <img className='modal-img' src={infos1} alt="SPF certified"></img>
               
             </div> </>,
     document.getElementById('portal')
