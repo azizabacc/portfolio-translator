@@ -155,7 +155,7 @@ function ContactForm({ language }) {
                             required
                         />
                     </div>
-                    <button type="submit" onClick={handleSubmit}>{language.submitButton}</button>
+                    <button className='submit' type="submit" onClick={handleSubmit}>{language.submitButton}</button>
                 </form>
           {/*       <div className='contact-infos'>
                     <p className='div-title'>Informations</p>

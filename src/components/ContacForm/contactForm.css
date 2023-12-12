@@ -1,8 +1,7 @@
-
 .form-section {
   background-image: url("../../assets/images/background3.jpg");
 }
-.contact-container{
+.contact-container {
   align-items: center;
 }
 .top-form {
@@ -75,7 +74,7 @@ form {
   flex-direction: column;
   justify-content: space-around;
 }
-.form-section button {
+.submit {
   background-color: #333;
   color: #fff;
   border-radius: 5px;
@@ -85,7 +84,7 @@ form {
   border: 1px solid white;
 }
 
-.form-section button:hover {
+.submit:hover {
   background-color: #555; /* Nouvelle couleur au survol, un ton plus foncé */
 }
 @media screen and (max-width: 1200px) {

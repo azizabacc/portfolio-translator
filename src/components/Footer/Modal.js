@@ -127,7 +127,7 @@ Nous vous conseillons de lire la déclaration de confidentialité du site Intern
       <h2 className='section-subtitle'>8. Droit applicable et tribunaux compétents</h2>
         <p className="text">Le droit belge s’applique à toutes les commandes et tous les services fournis. En cas de litige, seuls les tribunaux de l’arrondissement de Bruxelles sont compétents. Seule la version française des présentes conditions générales servira à l’interprétation du présent document.
       </p>
-      <button className='close-btn' onClick={onClose}>
+      <button className='submit' onClick={onClose}>
         Close
       </button>
       </div>

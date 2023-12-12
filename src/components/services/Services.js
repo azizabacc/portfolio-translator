@@ -31,7 +31,7 @@ function Services({ showLists, toggleList, language }) {
 
     return (
         <div className='services-section section'>
-            <div className='subsection'>
+            <div className='subsection services-subsection'>
                 <h2 className='section-title'>{language.servicesSection.titles.title}</h2>
 
                 <div className='services-desc' >

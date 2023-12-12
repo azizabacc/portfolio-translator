@@ -21,7 +21,7 @@ function App() {
 /*   const [loading, setLoading] = useState(true);
  */  const [showLists, setShowLists] = useState(Array(5).fill(false));
   const toggleList = (index) => {
-    const newShowLists = Array(5).fill(false);
+    const newShowLists = Array(6).fill(false);
     newShowLists[index] = !showLists[index];
     setShowLists(newShowLists);
   };
@@ -43,7 +43,9 @@ function App() {
   useEffect(() => {
     $(document).on('scroll', function () {
       var pageTop = $(document).scrollTop();
+      console.log('pagetop ',pageTop);
       var pageBottom = pageTop + $(window).height();
+      console.log(pageBottom);
       var tags = $('.tag');
 
       for (var i = 0; i < tags.length; i++) {
@@ -64,7 +66,7 @@ function App() {
 
       <Navbar language={language} onLanguageChange={handleLanguageChange} />
       <SiteTile />
-      <Element  className='tag' name="home">
+      <Element className='tag' name="home">
         <About />
       </Element>
       <Element className='tag' name="services">
